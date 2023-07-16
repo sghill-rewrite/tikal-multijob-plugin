@@ -1,12 +1,12 @@
 package com.tikal.jenkins.plugins.multijob;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.EnvVars;
 import hudson.Extension;
 import hudson.model.*;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
 
-import javax.annotation.Nonnull;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,7 +17,7 @@ public class MultiJobParametersAction extends ParametersAction {
 
     private List<ParameterValue> parameters;
 
-    public MultiJobParametersAction(@Nonnull List<ParameterValue> parameters) {
+    public MultiJobParametersAction(@NonNull List<ParameterValue> parameters) {
         super(parameters);
         this.parameters = parameters;
     }
@@ -46,7 +46,7 @@ public class MultiJobParametersAction extends ParametersAction {
     public static final class MultiJobParametersActionEnvironmentContributor extends EnvironmentContributor {
 
         @Override
-        public void buildEnvironmentFor(@Nonnull Run r, @Nonnull EnvVars envs, @Nonnull TaskListener listener) throws IOException, InterruptedException {
+        public void buildEnvironmentFor(@NonNull Run r, @NonNull EnvVars envs, @NonNull TaskListener listener) throws IOException, InterruptedException {
             MultiJobParametersAction action = r.getAction(MultiJobParametersAction.class);
             if (action != null) {
                 for (ParameterValue p : action.getParameters()) {

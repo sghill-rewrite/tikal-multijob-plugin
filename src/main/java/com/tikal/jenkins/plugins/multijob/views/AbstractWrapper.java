@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.model.*;
 import org.acegisecurity.AccessDeniedException;
 
@@ -11,8 +12,6 @@ import hudson.search.Search;
 import hudson.search.SearchIndex;
 import hudson.security.ACL;
 import hudson.security.Permission;
-
-import javax.annotation.Nonnull;
 
 abstract public class AbstractWrapper implements TopLevelItem {
 
@@ -24,7 +23,7 @@ abstract public class AbstractWrapper implements TopLevelItem {
         this.nestLevel = nestLevel;
     }
 
-    @Nonnull
+    @NonNull
     @Override
     public ACL getACL() {
         return project.getACL();
