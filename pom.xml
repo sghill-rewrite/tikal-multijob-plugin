@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.jenkins-ci.plugins</groupId>
 		<artifactId>plugin</artifactId>
-		<version>4.51</version>
+		<version>4.83</version>
 		<relativePath />
 	</parent>
 
@@ -57,8 +57,8 @@
 
 			<dependency>
 				<groupId>io.jenkins.tools.bom</groupId>
-				<artifactId>bom-2.346.x</artifactId>
-				<version>1607.va_c1576527071</version>
+				<artifactId>bom-2.440.x</artifactId>
+				<version>3135.v6d6c1f6b_3572</version>
 				<scope>import</scope>
 				<type>pom</type>
 			</dependency>
@@ -126,7 +126,6 @@
 			<groupId>org.jenkins-ci.plugins</groupId>
 			<artifactId>copyartifact</artifactId>
 			<!-- 1.43.1 and earlier vulnerable: https://www.jenkins.io/security/advisory/2020-05-06/ -->
-			<version>1.44</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -276,7 +275,7 @@
 
 	<properties>
 		<findbugs.failOnError>false</findbugs.failOnError>
-		<jenkins.version>2.346.1</jenkins.version>
+		<jenkins.version>2.440.3</jenkins.version>
 		<changelist>999999-SNAPSHOT</changelist>
 	</properties>
 
